@@ -14,9 +14,11 @@ public class FormGame extends javax.swing.JFrame {
      * Creates new form TicTacToe
      */
     public FormGame() {
+       setUndecorated(true);// Eleminar barra de opciones de la intefaz
+        
         initComponents();
         setResizable(false); //Para no redimencionar la pantalla 
-        setLocationRelativeTo(null);
+        setLocationRelativeTo(null);//Centrar UI en el medio de la pantalla 
     }
 
     /**
@@ -29,16 +31,19 @@ public class FormGame extends javax.swing.JFrame {
     private void initComponents() {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAutoRequestFocus(false);
+        setBackground(new java.awt.Color(14, 19, 49));
+        setPreferredSize(new java.awt.Dimension(416, 315));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 523, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 413, Short.MAX_VALUE)
         );
 
         pack();
