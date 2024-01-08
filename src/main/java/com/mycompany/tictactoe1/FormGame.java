@@ -55,6 +55,11 @@ public class FormGame extends javax.swing.JFrame {
                 PanelFondoMousePressed(evt);
             }
         });
+        PanelFondo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                PanelFondoKeyTyped(evt);
+            }
+        });
         PanelFondo.setLayout(null);
 
         Titulo.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
@@ -110,6 +115,11 @@ public class FormGame extends javax.swing.JFrame {
         Jugador1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Jugador1ActionPerformed(evt);
+            }
+        });
+        Jugador1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Jugador1KeyTyped(evt);
             }
         });
         PanelFondo.add(Jugador1);
@@ -223,6 +233,21 @@ public class FormGame extends javax.swing.JFrame {
     private void PanelFondoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelFondoMousePressed
         PanelFondo.requestFocus();
     }//GEN-LAST:event_PanelFondoMousePressed
+
+    private void Jugador1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Jugador1KeyTyped
+       char caracter = Character.toUpperCase(evt.getKeyChar());
+       evt.setKeyChar(caracter);
+       if(Jugador1.getText().length()>=8)
+           evt.consume();
+           
+    }//GEN-LAST:event_Jugador1KeyTyped
+
+    private void PanelFondoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PanelFondoKeyTyped
+       char caracter = Character.toUpperCase(evt.getKeyChar());
+       evt.setKeyChar(caracter);
+       if(Jugador2.getText().length()>=8)
+           evt.consume();
+    }//GEN-LAST:event_PanelFondoKeyTyped
 
     /**
      * @param args the command line arguments
