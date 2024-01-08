@@ -5,6 +5,8 @@
 package com.mycompany.tictactoe1;
 
 import java.awt.Color;
+import javax.swing.BorderFactory;
+import javax.swing.border.Border;
 
 /**
  *
@@ -12,15 +14,18 @@ import java.awt.Color;
  */
 public class FormGame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TicTacToe
-     */
-    public FormGame() {
-       setUndecorated(true);// Eleminar barra de opciones de la intefaz
-        
+    public void init() {
+        setUndecorated(true);// Eleminar barra de opciones de la intefaz
         initComponents();
         setResizable(false); //Para no redimencionar la pantalla 
-        setLocationRelativeTo(null);//Centrar UI en el medio de la pantalla 
+        setLocationRelativeTo(null);//Centrar UI en el medio de la pantalla
+        PanelFondo.requestFocus();
+
+    }
+
+    public FormGame() {
+        init();
+
     }
 
     /**
@@ -32,27 +37,34 @@ public class FormGame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        PanelFondo = new javax.swing.JPanel();
+        Titulo = new javax.swing.JLabel();
         lblCierre = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        Jugador1 = new javax.swing.JTextField();
+        Jugador2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
         setBackground(new java.awt.Color(0, 0, 102));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setPreferredSize(new java.awt.Dimension(416, 315));
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 102));
-        jPanel1.setPreferredSize(new java.awt.Dimension(416, 315));
+        PanelFondo.setBackground(new java.awt.Color(0, 0, 102));
+        PanelFondo.setPreferredSize(new java.awt.Dimension(416, 315));
+        PanelFondo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                PanelFondoMousePressed(evt);
+            }
+        });
+        PanelFondo.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(230, 251, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("TIK TAC TOE");
-        jLabel1.setAlignmentY(30.0F);
-        jLabel1.setAutoscrolls(true);
-        jLabel1.setLocation(new java.awt.Point(0, 30));
+        Titulo.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
+        Titulo.setForeground(new java.awt.Color(230, 251, 255));
+        Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Titulo.setText("TIK TAC TOE");
+        Titulo.setAlignmentY(30.0F);
+        Titulo.setAutoscrolls(true);
+        PanelFondo.add(Titulo);
+        Titulo.setBounds(20, 10, 382, 52);
 
         lblCierre.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
         lblCierre.setForeground(new java.awt.Color(255, 153, 153));
@@ -69,63 +81,148 @@ public class FormGame extends javax.swing.JFrame {
                 lblCierreMouseExited(evt);
             }
         });
+        PanelFondo.add(lblCierre);
+        lblCierre.setBounds(400, 0, 21, 32);
 
-        jTextField1.setBackground(new java.awt.Color(214, 252, 249));
-        jTextField1.setText("jTextField1");
+        Jugador1.setEditable(false);
+        Jugador1.setBackground(new java.awt.Color(214, 252, 249));
+        Jugador1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        Jugador1.setForeground(new java.awt.Color(101, 175, 245));
+        Jugador1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        Jugador1.setText("JUGADOR1");
+        Jugador1.setBorder(null);
+        Jugador1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                Jugador1FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                Jugador1FocusLost(evt);
+            }
+        });
+        Jugador1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Jugador1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Jugador1MouseExited(evt);
+            }
+        });
+        Jugador1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Jugador1ActionPerformed(evt);
+            }
+        });
+        PanelFondo.add(Jugador1);
+        Jugador1.setBounds(100, 140, 230, 40);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblCierre, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lblCierre, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(74, 74, 74)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 211, Short.MAX_VALUE))
-        );
+        Jugador2.setEditable(false);
+        Jugador2.setBackground(new java.awt.Color(249, 230, 254));
+        Jugador2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        Jugador2.setForeground(new java.awt.Color(201, 105, 220));
+        Jugador2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        Jugador2.setText("JUGADOR2");
+        Jugador2.setBorder(null);
+        Jugador2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                Jugador2FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                Jugador2FocusLost(evt);
+            }
+        });
+        Jugador2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Jugador2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Jugador2MouseExited(evt);
+            }
+        });
+        Jugador2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Jugador2ActionPerformed(evt);
+            }
+        });
+        PanelFondo.add(Jugador2);
+        Jugador2.setBounds(100, 230, 230, 40);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PanelFondo, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PanelFondo, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblCierreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCierreMouseClicked
-   System.exit(0);
+        System.exit(0);
     }//GEN-LAST:event_lblCierreMouseClicked
 
     private void lblCierreMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCierreMouseEntered
-       lblCierre.setForeground(Color.RED);
+        lblCierre.setForeground(Color.RED);
     }//GEN-LAST:event_lblCierreMouseEntered
 
     private void lblCierreMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCierreMouseExited
-      lblCierre.setForeground(new Color (255,153,153));
+        lblCierre.setForeground(new Color(255, 153, 153));
     }//GEN-LAST:event_lblCierreMouseExited
+
+    private void Jugador2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jugador2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Jugador2ActionPerformed
+
+    private void Jugador1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jugador1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Jugador1ActionPerformed
+
+    private void Jugador1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Jugador1MouseEntered
+        Border border = BorderFactory.createLineBorder(new Color(52, 136, 235), 2);
+        Jugador1.setBorder(border);
+    }//GEN-LAST:event_Jugador1MouseEntered
+
+    private void Jugador1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Jugador1MouseExited
+        Jugador1.setBorder(null);
+    }//GEN-LAST:event_Jugador1MouseExited
+
+    private void Jugador2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Jugador2MouseEntered
+        Border border = BorderFactory.createLineBorder(new Color(165, 40, 174), 2);
+        Jugador2.setBorder(border);
+    }//GEN-LAST:event_Jugador2MouseEntered
+
+    private void Jugador2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Jugador2MouseExited
+        Jugador2.setBorder(null);
+    }//GEN-LAST:event_Jugador2MouseExited
+
+    private void Jugador1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Jugador1FocusGained
+        if (Jugador1.getText().equals("JUGADOR1"))
+            Jugador1.setText("");
+    }//GEN-LAST:event_Jugador1FocusGained
+
+    private void Jugador2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Jugador2FocusGained
+        if (Jugador2.getText().equals("JUGADOR2"))
+            Jugador2.setText("");
+    }//GEN-LAST:event_Jugador2FocusGained
+
+    private void Jugador1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Jugador1FocusLost
+        if (Jugador1.getText().equals("")) {
+            Jugador1.setText("JUGADOR1");
+        }
+
+    }//GEN-LAST:event_Jugador1FocusLost
+
+    private void Jugador2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Jugador2FocusLost
+        if (Jugador2.getText().equals(""))
+            Jugador2.setText("JUGADOR2");
+    }//GEN-LAST:event_Jugador2FocusLost
+
+    private void PanelFondoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelFondoMousePressed
+        PanelFondo.requestFocus();
+    }//GEN-LAST:event_PanelFondoMousePressed
 
     /**
      * @param args the command line arguments
@@ -164,9 +261,10 @@ public class FormGame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField Jugador1;
+    private javax.swing.JTextField Jugador2;
+    private javax.swing.JPanel PanelFondo;
+    private javax.swing.JLabel Titulo;
     private javax.swing.JLabel lblCierre;
     // End of variables declaration//GEN-END:variables
 }
