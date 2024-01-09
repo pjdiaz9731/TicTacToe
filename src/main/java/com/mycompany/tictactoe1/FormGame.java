@@ -20,6 +20,9 @@ public class FormGame extends javax.swing.JFrame {
         setResizable(false); //Para no redimencionar la pantalla 
         setLocationRelativeTo(null);//Centrar UI en el medio de la pantalla
         PanelFondo.requestFocus();
+       
+        //Border bordeBoton = BoderFactory.createLineBorder(new Color(243,22,246),2);
+        //PanelBoton.setBorder(bordeBoton);
 
     }
 
@@ -42,6 +45,10 @@ public class FormGame extends javax.swing.JFrame {
         lblCierre = new javax.swing.JLabel();
         Jugador1 = new javax.swing.JTextField();
         Jugador2 = new javax.swing.JTextField();
+        PanelBoton = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        imagen1 = new modelo.Imagen();
+        imagen2 = new modelo.Imagen();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
@@ -156,6 +163,44 @@ public class FormGame extends javax.swing.JFrame {
         PanelFondo.add(Jugador2);
         Jugador2.setBounds(100, 230, 230, 40);
 
+        PanelBoton.setBackground(new java.awt.Color(42, 22, 79));
+
+        jLabel1.setBackground(new java.awt.Color(241, 227, 252));
+        jLabel1.setFont(new java.awt.Font("KufiStandardGK", 0, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("INICIAR");
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel1MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout PanelBotonLayout = new javax.swing.GroupLayout(PanelBoton);
+        PanelBoton.setLayout(PanelBotonLayout);
+        PanelBotonLayout.setHorizontalGroup(
+            PanelBotonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+        );
+        PanelBotonLayout.setVerticalGroup(
+            PanelBotonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        PanelFondo.add(PanelBoton);
+        PanelBoton.setBounds(140, 300, 160, 50);
+
+        imagen1.setText("imagen1");
+        PanelFondo.add(imagen1);
+        imagen1.setBounds(20, 140, 50, 50);
+
+        imagen2.setText("imagen2");
+        PanelFondo.add(imagen2);
+        imagen2.setBounds(30, 130, 70, 90);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -175,24 +220,24 @@ public class FormGame extends javax.swing.JFrame {
     }//GEN-LAST:event_lblCierreMouseClicked
 
     private void lblCierreMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCierreMouseEntered
-        lblCierre.setForeground(Color.RED);
+        lblCierre.setForeground(Color.RED); //Cambio de color cuando el mouse esta sobre la X
     }//GEN-LAST:event_lblCierreMouseEntered
 
     private void lblCierreMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCierreMouseExited
-        lblCierre.setForeground(new Color(255, 153, 153));
+        lblCierre.setForeground(new Color(255, 153, 153)); //Cambio de color cuando el mouse  no esta sobre la X
     }//GEN-LAST:event_lblCierreMouseExited
 
     private void Jugador2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jugador2ActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_Jugador2ActionPerformed
 
     private void Jugador1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jugador1ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_Jugador1ActionPerformed
 
     private void Jugador1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Jugador1MouseEntered
         Border border = BorderFactory.createLineBorder(new Color(52, 136, 235), 2);
-        Jugador1.setBorder(border);
+        Jugador1.setBorder(border);//Cambio de color cuando el mouse esta sobre el jugador 1 
     }//GEN-LAST:event_Jugador1MouseEntered
 
     private void Jugador1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Jugador1MouseExited
@@ -201,7 +246,7 @@ public class FormGame extends javax.swing.JFrame {
 
     private void Jugador2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Jugador2MouseEntered
         Border border = BorderFactory.createLineBorder(new Color(165, 40, 174), 2);
-        Jugador2.setBorder(border);
+        Jugador2.setBorder(border);//Cambio de color cuando el mouse esta sobre el jugador 2
     }//GEN-LAST:event_Jugador2MouseEntered
 
     private void Jugador2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Jugador2MouseExited
@@ -209,25 +254,25 @@ public class FormGame extends javax.swing.JFrame {
     }//GEN-LAST:event_Jugador2MouseExited
 
     private void Jugador1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Jugador1FocusGained
-        if (Jugador1.getText().equals("JUGADOR1"))
-            Jugador1.setText("");
+        if (Jugador1.getText().equals("JUGADOR1"))//Eliminar texto para que el usuario pueda copletar nombre al dar clic en Jugador1
+            Jugador1.setText("");//Volver a Poner "Jugador1" su el usuario no completa la casilla 
     }//GEN-LAST:event_Jugador1FocusGained
 
     private void Jugador2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Jugador2FocusGained
-        if (Jugador2.getText().equals("JUGADOR2"))
+        if (Jugador2.getText().equals("JUGADOR2"))//Eliminar texto para que el usuario pueda copletar nombre al dar clic en Jugador2
             Jugador2.setText("");
     }//GEN-LAST:event_Jugador2FocusGained
 
     private void Jugador1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Jugador1FocusLost
         if (Jugador1.getText().equals("")) {
-            Jugador1.setText("JUGADOR1");
+            Jugador1.setText("JUGADOR1");//Volver a Poner "Jugador1" su el usuario no completa la casilla
         }
 
     }//GEN-LAST:event_Jugador1FocusLost
 
     private void Jugador2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Jugador2FocusLost
         if (Jugador2.getText().equals(""))
-            Jugador2.setText("JUGADOR2");
+            Jugador2.setText("JUGADOR2");//Volver a Poner "Jugador2" su el usuario no completa la casilla
     }//GEN-LAST:event_Jugador2FocusLost
 
     private void PanelFondoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelFondoMousePressed
@@ -248,6 +293,14 @@ public class FormGame extends javax.swing.JFrame {
        if(Jugador2.getText().length()>=8)
            evt.consume();
     }//GEN-LAST:event_PanelFondoKeyTyped
+
+    private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
+       PanelBoton.setBackground (new Color(126,46,196));//Cambio de color cuando el mouse esta sobre el Boton de Inicio 
+    }//GEN-LAST:event_jLabel1MouseEntered
+
+    private void jLabel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseExited
+       PanelBoton.setBackground (new Color(42,22,79));//Cambio de color cuando el mouse esta fuera el Boton de Inicio 
+    }//GEN-LAST:event_jLabel1MouseExited
 
     /**
      * @param args the command line arguments
@@ -288,8 +341,17 @@ public class FormGame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Jugador1;
     private javax.swing.JTextField Jugador2;
+    private javax.swing.JPanel PanelBoton;
     private javax.swing.JPanel PanelFondo;
     private javax.swing.JLabel Titulo;
+    private modelo.Imagen imagen1;
+    private modelo.Imagen imagen2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblCierre;
     // End of variables declaration//GEN-END:variables
-}
+
+    private void color(int i, int i0, int i1) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+ }
