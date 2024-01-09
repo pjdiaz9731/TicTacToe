@@ -49,6 +49,11 @@
           <Dimension value="[416, 315]"/>
         </Property>
       </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleParent" type="javax.accessibility.Accessible" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="PanelFondo"/>
+        </Property>
+      </AccessibilityProperties>
       <Events>
         <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PanelFondoMousePressed"/>
         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="PanelFondoKeyTyped"/>
@@ -210,26 +215,6 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="modelo.Imagen" name="imagen1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="imagen1"/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="20" y="140" width="50" height="50"/>
-            </Constraint>
-          </Constraints>
-        </Component>
-        <Component class="modelo.Imagen" name="imagen2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="imagen2"/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="30" y="130" width="70" height="90"/>
-            </Constraint>
-          </Constraints>
-        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
