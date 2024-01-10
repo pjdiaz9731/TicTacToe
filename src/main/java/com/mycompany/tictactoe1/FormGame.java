@@ -47,6 +47,10 @@ public class FormGame extends javax.swing.JFrame {
         Jugador2 = new javax.swing.JTextField();
         PanelBoton = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        imagen1 = new modelo.Imagen();
+        imagen2 = new modelo.Imagen();
+        imagen3 = new modelo.Imagen();
+        imagen4 = new modelo.Imagen();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
@@ -92,7 +96,7 @@ public class FormGame extends javax.swing.JFrame {
             }
         });
         PanelFondo.add(lblCierre);
-        lblCierre.setBounds(400, 0, 21, 32);
+        lblCierre.setBounds(430, 0, 21, 32);
 
         Jugador1.setEditable(false);
         Jugador1.setBackground(new java.awt.Color(214, 252, 249));
@@ -128,7 +132,7 @@ public class FormGame extends javax.swing.JFrame {
             }
         });
         PanelFondo.add(Jugador1);
-        Jugador1.setBounds(100, 140, 230, 40);
+        Jugador1.setBounds(120, 140, 230, 40);
 
         Jugador2.setEditable(false);
         Jugador2.setBackground(new java.awt.Color(249, 230, 254));
@@ -159,7 +163,7 @@ public class FormGame extends javax.swing.JFrame {
             }
         });
         PanelFondo.add(Jugador2);
-        Jugador2.setBounds(100, 230, 230, 40);
+        Jugador2.setBounds(120, 230, 230, 40);
 
         PanelBoton.setBackground(new java.awt.Color(42, 22, 79));
 
@@ -181,25 +185,45 @@ public class FormGame extends javax.swing.JFrame {
         PanelBoton.setLayout(PanelBotonLayout);
         PanelBotonLayout.setHorizontalGroup(
             PanelBotonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         PanelBotonLayout.setVerticalGroup(
             PanelBotonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         PanelFondo.add(PanelBoton);
         PanelBoton.setBounds(140, 300, 160, 50);
 
+        imagen1.setText("imagen1");
+        imagen1.setRuta("/Recursos1/Circulo.png");
+        PanelFondo.add(imagen1);
+        imagen1.setBounds(370, 230, 49, 50);
+
+        imagen2.setText("imagen1");
+        imagen2.setRuta("/Recursos1/JugadorEquis.png");
+        PanelFondo.add(imagen2);
+        imagen2.setBounds(40, 140, 49, 50);
+
+        imagen3.setText("imagen1");
+        imagen3.setRuta("/Recursos1/JugadorCirculo.png");
+        PanelFondo.add(imagen3);
+        imagen3.setBounds(40, 230, 49, 50);
+
+        imagen4.setText("imagen1");
+        imagen4.setRuta("/Recursos1/Equis.png");
+        PanelFondo.add(imagen4);
+        imagen4.setBounds(370, 130, 49, 50);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PanelFondo, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PanelFondo, javax.swing.GroupLayout.DEFAULT_SIZE, 457, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PanelFondo, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PanelFondo, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
         );
 
         PanelFondo.getAccessibleContext().setAccessibleParent(PanelFondo);
@@ -335,6 +359,10 @@ public class FormGame extends javax.swing.JFrame {
     private javax.swing.JPanel PanelBoton;
     private javax.swing.JPanel PanelFondo;
     private javax.swing.JLabel Titulo;
+    private modelo.Imagen imagen1;
+    private modelo.Imagen imagen2;
+    private modelo.Imagen imagen3;
+    private modelo.Imagen imagen4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblCierre;
     // End of variables declaration//GEN-END:variables
