@@ -1,13 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package modelo;
 
-/**
- *
- * @author pjdiaz
- */
+
 public class PanelRedondeado {
+  
+    private class PanelRedondeado extends Jpanel{
     
+        
+        
+    }
 }
