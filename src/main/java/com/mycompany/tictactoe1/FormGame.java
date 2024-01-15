@@ -14,20 +14,24 @@ import javax.swing.border.Border;
  */
 public class FormGame extends javax.swing.JFrame {
 
+    public FormGame() {
+        init();
+    
+    }
+    
     public void init() {
         setUndecorated(true);// Eleminar barra de opciones de la intefaz
         initComponents();
         setResizable(false); //Para no redimencionar la pantalla 
         setLocationRelativeTo(null);//Centrar UI en el medio de la pantalla
         PanelFondo.requestFocus();
+        setBackground(new Color (0,0,0,0));
+        PanelFondo.setOpaque(false);
+       Border bordeBoton= BorderFactory.createLineBorder(new Color (243,211,246),2);
+       PanelBoton.setBorder(bordeBoton);
+        
+
        
-        //Border bordeBoton = BoderFactory.createLineBorder(new Color(243,22,246),2);
-        //PanelBoton.setBorder(bordeBoton);
-
-    }
-
-    public FormGame() {
-        init();
 
     }
 
@@ -40,7 +44,7 @@ public class FormGame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        PanelFondo = new javax.swing.JPanel();
+        PanelFondo = new modelo.PanelRedondeado();
         Titulo = new javax.swing.JLabel();
         lblCierre = new javax.swing.JLabel();
         Jugador1 = new javax.swing.JTextField();
@@ -225,8 +229,6 @@ public class FormGame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PanelFondo, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
         );
-
-        PanelFondo.getAccessibleContext().setAccessibleParent(PanelFondo);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

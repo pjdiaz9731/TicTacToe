@@ -23,7 +23,14 @@ import javax.swing.JPanel;
        RoundRectangle2D.Double formaRedondeada = new RoundRectangle2D.Double(
        0,0,this.getWidth()-1,this.getHeight()-1,arcoAncho,arcoAltura);
    
+   g2. setColor(this.getBackground());
+   g2.fill(formaRedondeada);
+   g2.setColor(colorBonrde);
+   g2.draw(formaRedondeada);
+   g2.dispose();
    
+   
+ 
    }
    
         
