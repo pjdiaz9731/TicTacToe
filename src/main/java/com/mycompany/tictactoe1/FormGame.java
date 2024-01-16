@@ -100,7 +100,7 @@ public class FormGame extends javax.swing.JFrame {
             }
         });
         PanelFondo.add(lblCierre);
-        lblCierre.setBounds(430, 0, 21, 32);
+        lblCierre.setBounds(420, 10, 21, 32);
 
         Jugador1.setEditable(false);
         Jugador1.setBackground(new java.awt.Color(214, 252, 249));
@@ -136,7 +136,7 @@ public class FormGame extends javax.swing.JFrame {
             }
         });
         PanelFondo.add(Jugador1);
-        Jugador1.setBounds(120, 140, 230, 40);
+        Jugador1.setBounds(100, 140, 230, 40);
 
         Jugador2.setEditable(false);
         Jugador2.setBackground(new java.awt.Color(249, 230, 254));
@@ -167,7 +167,7 @@ public class FormGame extends javax.swing.JFrame {
             }
         });
         PanelFondo.add(Jugador2);
-        Jugador2.setBounds(120, 230, 230, 40);
+        Jugador2.setBounds(100, 230, 230, 40);
 
         PanelBoton.setBackground(new java.awt.Color(42, 22, 79));
 
@@ -182,6 +182,9 @@ public class FormGame extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel1MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel1MousePressed(evt);
             }
         });
 
@@ -202,22 +205,22 @@ public class FormGame extends javax.swing.JFrame {
         imagen1.setText("imagen1");
         imagen1.setRuta("/Recursos1/Circulo.png");
         PanelFondo.add(imagen1);
-        imagen1.setBounds(370, 230, 49, 50);
+        imagen1.setBounds(360, 230, 49, 50);
 
         imagen2.setText("imagen1");
         imagen2.setRuta("/Recursos1/JugadorEquis.png");
         PanelFondo.add(imagen2);
-        imagen2.setBounds(40, 140, 49, 50);
+        imagen2.setBounds(30, 130, 49, 50);
 
         imagen3.setText("imagen1");
         imagen3.setRuta("/Recursos1/JugadorCirculo.png");
         PanelFondo.add(imagen3);
-        imagen3.setBounds(40, 230, 49, 50);
+        imagen3.setBounds(30, 230, 49, 50);
 
         imagen4.setText("imagen1");
         imagen4.setRuta("/Recursos1/Equis.png");
         PanelFondo.add(imagen4);
-        imagen4.setBounds(370, 130, 49, 50);
+        imagen4.setBounds(360, 140, 49, 50);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -318,6 +321,13 @@ public class FormGame extends javax.swing.JFrame {
     private void lblCierreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCierreMouseClicked
         System.exit(0);
     }//GEN-LAST:event_lblCierreMouseClicked
+
+    private void jLabel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MousePressed
+this.dispose();
+
+Form_Tictactoe ticTactoe = new Form_Tictactoe();
+ticTactoe.setVisible(true);
+    }//GEN-LAST:event_jLabel1MousePressed
 
     /**
      * @param args the command line arguments
