@@ -7,6 +7,7 @@ package com.mycompany.tictactoe1;
 import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.border.Border;
+import modelo.Jugador;
 
 /**
  *
@@ -324,6 +325,8 @@ public class FormGame extends javax.swing.JFrame {
 
     private void jLabel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MousePressed
 this.dispose();
+Jugador jugador1 = new Jugador (TipoImagen.EQUIS);
+if (tx)
 
 Form_Tictactoe ticTactoe = new Form_Tictactoe();
 ticTactoe.setVisible(true);

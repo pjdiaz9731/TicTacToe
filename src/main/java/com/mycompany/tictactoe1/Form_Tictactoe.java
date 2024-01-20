@@ -33,8 +33,8 @@ public class Form_Tictactoe extends javax.swing.JFrame {
         lblJugador2 = new javax.swing.JLabel();
         lblJugador1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lblPuntajeJ1 = new javax.swing.JLabel();
+        lblPuntajeJ2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,19 +91,19 @@ public class Form_Tictactoe extends javax.swing.JFrame {
         PanelFondoG.add(jLabel1);
         jLabel1.setBounds(190, 60, 20, 60);
 
-        jLabel2.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("0");
-        PanelFondoG.add(jLabel2);
-        jLabel2.setBounds(130, 60, 60, 60);
+        lblPuntajeJ1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        lblPuntajeJ1.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuntajeJ1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPuntajeJ1.setText("0");
+        PanelFondoG.add(lblPuntajeJ1);
+        lblPuntajeJ1.setBounds(130, 60, 60, 60);
 
-        jLabel3.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("0");
-        PanelFondoG.add(jLabel3);
-        jLabel3.setBounds(210, 60, 60, 60);
+        lblPuntajeJ2.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        lblPuntajeJ2.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuntajeJ2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPuntajeJ2.setText("0");
+        PanelFondoG.add(lblPuntajeJ2);
+        lblPuntajeJ2.setBounds(210, 60, 60, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -137,10 +137,10 @@ public class Form_Tictactoe extends javax.swing.JFrame {
     private modelo.Imagen imagen1;
     private modelo.Imagen imagen3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblCierre;
     private javax.swing.JLabel lblJugador1;
     private javax.swing.JLabel lblJugador2;
+    private javax.swing.JLabel lblPuntajeJ1;
+    private javax.swing.JLabel lblPuntajeJ2;
     // End of variables declaration//GEN-END:variables
 }
