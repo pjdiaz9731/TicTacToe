@@ -326,7 +326,7 @@ public class FormGame extends javax.swing.JFrame {
         Jugador jugador1 = new Jugador(TipoImagen.EQUIS);
         if (Jugador1.getText().equals(""));
         jugador1.setNombre("JUGADOR1");
-        else
+      else
  jugador1.setNombre(Jugador1.getText());
 
         Jugador jugador2 = new Jugador(TipoImagen.CIRCULO);
