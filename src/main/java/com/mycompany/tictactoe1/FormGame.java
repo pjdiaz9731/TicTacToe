@@ -324,18 +324,20 @@ public class FormGame extends javax.swing.JFrame {
     private void jLabel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MousePressed
         this.dispose();
         Jugador jugador1 = new Jugador(TipoImagen.EQUIS);
-        if (Jugador1.getText().equals(""));
-        jugador1.setNombre("JUGADOR1");
-      else
- jugador1.setNombre(Jugador1.getText());
+        if (Jugador1.getText().equals("")) {
+            jugador1.setNombre("JUGADOR1");
+        } else {
+            jugador1.setNombre(Jugador1.getText());
+        }
 
         Jugador jugador2 = new Jugador(TipoImagen.CIRCULO);
-        if (Jugador2.getText().equals(""));
-        jugador1.setNombre("JUGADOR2");
-        else
- jugador1.setNombre(Jugador2.getText());
+        if (Jugador2.getText().equals("")) {
+            jugador2.setNombre("JUGADOR2");
+        } else {
+            jugador2.setNombre(Jugador2.getText());
+        }
 
-        Form_Tictactoe ticTactoe = new Form_Tictactoe();
+        Form_Tictactoe ticTactoe = new Form_Tictactoe(jugador1,jugador2);
         ticTactoe.setVisible(true);
     }//GEN-LAST:event_jLabel1MousePressed
 
